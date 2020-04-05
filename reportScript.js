@@ -27,5 +27,6 @@ submit.addEventListener("click", function(){
         leaderboard.initial.push(initials)
         leaderboard.score.push(result)
         localStorage.setItem("leaderboard", JSON.stringify(leaderboard))
+        window.location.replace("leaderboard.html");
     }
 });

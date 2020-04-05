@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Quiz Questions</title>
+    <title>Code Quiz leaderboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -11,11 +11,12 @@
 </head>
 <body>
     <!-- header -->
+    <!-- main page -->
     <main class=".container-md">
         <div class="row justify-content-end">
             <ul class="nav">
                 <li class="nav-item  alert-secondary">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Time: <span id="timeLeft">120</span> </a>
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Time: <span>--</span> </a>
                 </li>
             </ul>
         </div>
@@ -27,29 +28,22 @@
                 <li class="nav-item alert-danger">
                 <a class="nav-link" href="index.html">Restart</a>
                 </li>
+                <!-- <li class="nav-item  alert-secondary">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Time: --</a>
+                </li> -->
             </ul>
         </div>
-        <!-- main body -->
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <div class="jumbotron" id="quizBlock">
-                    <h1 class="display-4" id="title">Variables</h1>
-                    <p class="lead" id="question">What kind of data can be stored in a variable</p>
-                    <hr class="my-4">
-                    <p>Chose your answer below</p>
-                    <a class="btn btn-primary btn-lg d-flex justify-content-center quizButton hide" href="#" role="button" id="ans1">Numbers</a> <br> <br>
-                    <a class="btn btn-primary btn-lg d-flex justify-content-center quizButton" href="#" role="button" id="ans2">letters</a> <br> <br>
-                    <a class="btn btn-primary btn-lg d-flex justify-content-center quizButton" href="#" role="button" id="ans3">booleans</a> <br> <br>
-                    <a class="btn btn-primary btn-lg d-flex justify-content-center quizButton" href="#" role="button" id="ans4">all of the above</a> 
-                    <hr class="my-4">
-                    <h2 id="ansCheck"></h2>
-                    
-                </div>  
+        <div class="container-md">
+            <div class="row">
+                <header><h1 class="justify-content-center">High Scores</h1></header>
             </div>
-            <div class="col-md-2"></div>
+            <div class="row">
+                
+                <ul class="list-group col-md-8" id="leaderboard">
+                </ul>
+                <div class="col-md-2"></div>
+            </div>
         </div>
-    </main>
 </body>
-<script src="quizScript.js"></script>
+<script src="leaderboardScript.js"></script>
 </html>
